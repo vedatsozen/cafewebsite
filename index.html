@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +8,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body>
+<body class="max-w-screen">
 
-    <nav class="fixed z-40 top-0 left-0 flex flex-row justify-center items-center h-24 w-full">
+    <nav id="nav" class="fixed z-40 top-0 left-0 flex flex-row justify-center items-center h-20 w-full">
         <div class="m-auto flex flex-row justify-center items-center w-fit gap-10">
-        <a href="#" class="text-2xl text-white mx-auto">Home</a>
-        <a href="#" class="text-2xl text-white mx-auto">Our Products</a>
-        <a href="#" class="text-2xl text-white mx-auto">Contact</a>
+        <a href="#" class="text-xl text-white mx-auto">Anasayfa</a>
+        <a id="ourproductsa" href="#ourproducts" class="text-xl text-white mx-auto">Kahve Çeşitlerimiz</a>
+        <a href="#" class="text-xl text-white mx-auto">İletişim</a>
         </div>
     </nav>
 
-    <header id="header" class="relative h-screen w-screen flex justify-center items-center">
+    <header id="header" class="relative h-screen max-w-screen flex justify-center items-center">
         <img class="h-20 w-20 m-auto fixed top-5 left-5 z-50" id="coffee" src="imgs/coffee.png">
         <div class="h-5/6 w-10/12 flex flex-col justify-center items-center">
             <h1 id="headerh1" class="text-shadow text-white text-8xl tracking-widest">TAILWIND CAFE</h1>
@@ -26,6 +26,29 @@
 
         </div>
     </header>
+
+    <section id="ourproducts" class="bg-zinc-100 h-screen max-w-screen p-0 border border-2 flex flex-col flex-start items-center">
+        <h1 class="text-7xl text-black mt-12">Kahve Çeşitleri</h1>
+        <div class="h-4/6 w-full mt-12 flex flex-row w-full justify-center items-center gap-4">
+            <div class="h-full flex flex-col justify-center items-center">
+                <h1 class="text-3xl p-4 h-1/6 w-full bg-black text-white flex justify-center items-center">Türk Kahvesi</h1>
+                <img class="h-4/6 w-full" src="imgs/kahveler/turkkahvesi.jpg">
+                <h1 class="p-4 h-1/6 w-full bg-red-500 text-white flex justify-center items-center">50 TL</h1>
+            </div>
+            <div class="h-full flex flex-col justify-center items-center">
+                <h1 class="text-3xl p-4 h-1/6 w-full bg-black text-white flex justify-center items-center">Dibek Kahvesi</h1>
+                <img class="h-4/6 w-full" src="imgs/kahveler/filtrekahve.jpg">
+                <h1 class="p-4 h-1/6 w-full bg-red-500 text-white flex justify-center items-center">30 TL</h1>
+            </div>
+            <div class="h-full flex flex-col justify-center items-center">
+                <h1 class="text-3xl p-4 h-1/6 w-full bg-black text-white flex justify-center items-center">Espresso</h1>
+                <img class="h-4/6 w-full" src="imgs/kahveler/espresso.jpg">
+                <h1 class="p-4 h-1/6 w-full bg-red-500 text-white flex justify-center items-center">40 TL</h1>
+            </div>
+        </div>
+    </section>
+
+    <a class="fixed bottom-10 right-10" href="#top"><img id="uparrow" src="imgs/uparrow.png">
 
 </body>
 
@@ -49,7 +72,31 @@ function arkaplanDegis() {
 
 setInterval(arkaplanDegis, 2000);
 
+let ourproductsa = document.getElementById("ourproductsa");
+let nav = document.getElementById("nav");
 
+window.addEventListener("scroll", function() {
+    let scrollY = window.scrollY;
+    if (scrollY > 200) {
+        nav.classList.add("slideUp");
+    } else {
+        nav.classList.remove("slideUp");
+    }
+});
+
+window.addEventListener("scroll", function() {
+
+    let upArrow = document.getElementById("uparrow");
+
+    let scrollY = window.scrollY;
+    if (scrollY > 200) {
+        upArrow.style.display = "block";
+         upArrow.style.transition = "300ms ease"
+    } else {
+        upArrow.style.display = "none";
+        upArrow.style.transition = "300ms ease"
+    }
+});
 </script>
 
 </html>

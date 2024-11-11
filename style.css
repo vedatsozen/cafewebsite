@@ -10,6 +10,7 @@ body {
     padding: 0px;
     margin: auto 0;
     box-sizing: border-box;
+    max-width: 100vw !important;
 }
 
 header {
@@ -33,8 +34,10 @@ img#coffee:hover {
     transition: 500ms ease;
 }
 
+
+
 nav > div > a {
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     transition: 500ms ease;
     border: 2px solid transparent;
     border-radius:5px 15px;
@@ -51,4 +54,11 @@ nav > div > a:hover {
 
 p#headerp {
     background-color: rgba(0,0,0,0.5);
+}
+
+
+
+nav.slideUp {
+    transform: translateY(-80px);
+    transition: 500ms ease;
 }
