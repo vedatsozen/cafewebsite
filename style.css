@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+body {
+    padding: 0px;
+    margin: auto 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url("imgs/arkaplan1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+h1#headerh1 {
+    text-shadow: 0 0 20px black;
+    font-weight: 600;
+}
+
+img#coffee {
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+img#coffee:hover {
+    transform: translateY(-5px);
+    transition: 500ms ease;
+}
+
+nav > div > a {
+    letter-spacing: 5px;
+    transition: 500ms ease;
+    border: 2px solid transparent;
+    border-radius:5px 15px;
+    padding: 5px 7px;
+}
+
+
+nav > div > a:hover {
+    transition: 500ms ease;
+    border: 2px solid white;
+    padding: 5px 7px;
+    border-radius:5px;
+}
+
+p#headerp {
+    background-color: rgba(0,0,0,0.5);
+}
